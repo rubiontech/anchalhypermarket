@@ -32,7 +32,7 @@ const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 function useCarousel() {
   const context = React.useContext(CarouselContext);
   if (!context) {
-    return null
+    throw new Error("useCarousel must be used within a <Carousel />");
   }
   return context;
 }
@@ -144,10 +144,10 @@ const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const { carouselRef } = useCarousel();
-
+  const context = useCarousel(); // Ensure this always has a valid context
+  
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div ref={context.carouselRef} className="overflow-hidden">
       <div ref={ref} className={cn("flex", className)} {...props} />
     </div>
   );
@@ -158,7 +158,7 @@ const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel();
+  const { orientation } = useCarousel(); // Ensure this always has a valid context
 
   return (
     <div

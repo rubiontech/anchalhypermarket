@@ -13,7 +13,7 @@ const CarouselComponent = dynamic(() => import("../components/Courousel"), {
   ssr: false,
 });
 
-export default function Home() {
+export default function Home() {  
   return (
     <>
       <div
