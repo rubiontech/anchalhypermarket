@@ -1,0 +1,55 @@
+{
+  "name": "Anchal Hyper Mart",
+  "rating": 3.8,
+  "reviews": [
+    {
+      "author_name": "SARATH S PILLAI",
+      "author_url": "https://www.google.com/maps/contrib/107524134823517142612/reviews",
+      "language": "en",
+      "original_language": "en",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjX0vJuZKa7RZxGkWI0ITqrpqD46FfpnJsMfmXo6SEayBIrxrYc=s128-c0x00000000-cc-rp-mo-ba3",
+      "rating": 5,
+      "relative_time_description": "11 months ago",
+      "text": "Good place if you want to purchase all the things you need in one go. It got all the things like food, beverages, groceries, necessities etc that are required in your household. Also got good customer service and a fast billing section.",
+      "time": 1693822771,
+      "translated": false
+    },
+    {
+      "author_name": "Rahul R",
+      "author_url": "https://www.google.com/maps/contrib/100705097584067406638/reviews",
+      "language": "en",
+      "original_language": "en",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjU3RQsiuknnYTCIjcbOKkQW7EjZ--cTb3WOmB1QxMfaYegspOVVyA=s128-c0x00000000-cc-rp-mo-ba5",
+      "rating": 5,
+      "relative_time_description": "a year ago",
+      "text": "It's nice ...you can buy almost the products here",
+      "time": 1691131559,
+      "translated": false
+    },
+    {
+      "author_name": "Deepak Hegde",
+      "author_url": "https://www.google.com/maps/contrib/110247463461250563690/reviews",
+      "language": "en",
+      "original_language": "en",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWUdxxc2Xj8FtDClo3uTXeqWtdGM9iTOaR25lDPbFyTIRmEFq0a=s128-c0x00000000-cc-rp-mo-ba5",
+      "rating": 5,
+      "relative_time_description": "7 months ago",
+      "text": "Nice small store. Have most of the daily item. Important staffs are very friedly. We didn't know local language, but they halped us. Great..",
+      "time": 1704683633,
+      "translated": false
+    },
+    
+    {
+      "author_name": "Shaino V alex",
+      "author_url": "https://www.google.com/maps/contrib/111495780971144774975/reviews",
+      "language": "en",
+      "original_language": "en",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVxHd-_vpwcsfSynzrdI3IZwXpbnZ39dlZTJgVsprS_i1jxmAvh=s128-c0x00000000-cc-rp-mo-ba2",
+      "rating": 4,
+      "relative_time_description": "2 months ago",
+      "text": "Good supermarket with everything a house needs",
+      "time": 1717587018,
+      "translated": false
+    }
+  ]
+}
