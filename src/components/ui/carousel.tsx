@@ -15,7 +15,7 @@ type CarouselProps = {
   orientation?: "horizontal" | "vertical";
   setApi?: (api: CarouselApi) => void;
   className?: string;
-  children?: React.ReactNode; // Include children in the type definition
+  children?: React.ReactNode;
 };
 
 type CarouselContextProps = {
@@ -32,7 +32,7 @@ const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 function useCarousel() {
   const context = React.useContext(CarouselContext);
   if (!context) {
-    throw new Error("useCarousel must be used within a <Carousel />");
+    return null
   }
   return context;
 }
@@ -106,14 +106,18 @@ const Carousel = React.forwardRef<
       };
     }, [api, onSelect]);
 
+    // Ensure this component is client-side only
+    if (typeof window === "undefined") {
+      return null;
+    }
+
     return (
       <CarouselContext.Provider
         value={{
           carouselRef,
           api: api,
           opts,
-          orientation:
-            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
+          orientation: orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
           canScrollPrev,
@@ -161,10 +165,7 @@ const CarouselItem = React.forwardRef<
       ref={ref}
       role="group"
       aria-roledescription="slide"
-      className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full", 
-        className
-      )}
+      className={cn("min-w-0 shrink-0 grow-0 basis-full", className)}
       {...props}
     />
   );
