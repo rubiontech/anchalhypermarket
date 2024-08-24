@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
-import "./globals.css"; 
+import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { constructMetaData } from "@/lib/utils"; 
+import { constructMetaData } from "@/lib/utils";
 import Footer from "@/components/Footer";
 import Providers from "@/components/Providers";
 import { Analytics } from "@vercel/analytics/react";
@@ -19,14 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={googleFont.className}>
-        <Navbar />
-        <Providers>  
-          <main>
-            {children}
-          </main>
+        <Providers>
+          <Navbar />
+
+          <main>{children}</main>
           <Analytics />
+
+          <Footer />
         </Providers>
-        <Footer />
       </body>
     </html>
   );
