@@ -30,7 +30,7 @@ type CarouselContextProps = {
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
 function useCarousel() {
-  const context = React?.useContext(CarouselContext);
+  const context = React.useContext(CarouselContext);
   if (!context) {
     throw new Error("useCarousel must be used within a <Carousel />");
   }
@@ -53,6 +53,7 @@ const Carousel = React.forwardRef<
     },
     ref
   ) => {
+ 
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...opts,
@@ -144,7 +145,7 @@ const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const context = useCarousel(); // Ensure this always has a valid context
+  const context = useCarousel();  
   
   return (
     <div ref={context.carouselRef} className="overflow-hidden">
@@ -157,8 +158,7 @@ CarouselContent.displayName = "CarouselContent";
 const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel(); // Ensure this always has a valid context
+>(({ className, ...props }, ref) => { 
 
   return (
     <div
