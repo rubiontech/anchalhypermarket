@@ -19,13 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={googleFont.className}>
-     
+        <Providers>
           <Navbar />
 
           <main>{children}</main>
           <Analytics />
 
-          <Footer /> 
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
