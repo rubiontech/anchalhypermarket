@@ -9,9 +9,9 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 
 // Dynamically import the client component
-// const CarouselComponent = dynamic(() => import("../components/Courousel"), {
-//   ssr: false,
-// });
+const CarouselComponent = dynamic(() => import("../components/Courousel"), {
+  ssr: false,
+});
 
 export default function Home() {  
   return (
@@ -21,7 +21,7 @@ export default function Home() {
         className="pt-[43px] bg-white bg-opacity-60 backdrop-blur-md min-h-screen overflow-hidden"
       >
         <div className="flex-col md:flex md:flex-row  ">
-          {/* <CarouselComponent /> */}
+          <CarouselComponent />
         </div>
         <div id="product" className="flex flex-col p-4">
           <h1 className="text-xl text-center font-semibold mb-4">Products</h1>
