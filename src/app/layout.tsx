@@ -16,8 +16,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
+  return ( 
       <body className={googleFont.className}>
         <Providers>
           <Navbar />
@@ -27,7 +26,6 @@ export default function RootLayout({
 
           <Footer />
         </Providers>
-      </body>
-    </html>
+      </body> 
   );
 }
